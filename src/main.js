@@ -46,7 +46,7 @@ class Main { //The toLowercase block
           arguments: {
             DATA: {
               type: Scratch.ArgumentType.STRING,
-              deafultValue: ''
+              deafultValue: 'https://api.scratch.mit.edu'
             }
           }
         }
@@ -62,8 +62,8 @@ class Main { //The toLowercase block
     return toupper(args.TEXT) //Converts the input of the block to uppercase
   }
 
-  Fetch (args) { //The Fetch block
-    return fetch(args.DATA)
+  fetch (args) {
+    return fetch(args.URL)
       .then(r => r.text())
       .catch(() => '');
   }

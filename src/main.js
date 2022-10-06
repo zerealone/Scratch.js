@@ -7,6 +7,10 @@ function tolower(value){ //We must create a new function to convert a string to 
  return ("" +  value).toLowerCase();
 }
 
+function toupper(value){ //We must create a new function to convert a string to uppercase, because of many errors without it.
+ return ("" + value).toUpperCase();
+}
+
 class Main { //The toLowercase block
   getInfo () { //The info of the blocks
     return {
@@ -23,6 +27,17 @@ class Main { //The toLowercase block
               defaultValue: 'HELLO WORLD!' //The deafult value of the argument in the block.
             }
           }
+        },
+        {
+          opcode: 'ToUppercase',
+          blockType: Scratch.BlockType.REPORTER, //The block type
+          text: 'toUppercase [TEXT]',
+          arguments: {
+            TEXT: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'hello world!'
+            }
+          }
         }
       ]
     };
@@ -30,6 +45,10 @@ class Main { //The toLowercase block
 
   ToLowercase (args) {
     return tolower(args.TEXT); //Converts the input of the block to lowercase
+  }
+ 
+  ToUppercase (args) {
+    return toupper(args.TEXT) //Converts the input of the block to uppercase
   }
 }
 

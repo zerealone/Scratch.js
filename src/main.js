@@ -62,7 +62,7 @@ class Main { //The toLowercase block
     return toupper(args.TEXT) //Converts the input of the block to uppercase
   }
 
-  fetch (args) {
+  Fetch (args) {
     return fetch(args.URL)
       .then(r => r.text())
       .catch(() => '');

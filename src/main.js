@@ -44,7 +44,7 @@ class Main { //The toLowercase block
           blockType: Scratch.BlockType.REPORTER,
           text: 'FETCH [URL]', //The block format
           arguments: {
-            DATA: {
+            URL: {
               type: Scratch.ArgumentType.STRING,
               deafultValue: 'https://api.scratch.mit.edu'
             }

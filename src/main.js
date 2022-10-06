@@ -42,7 +42,7 @@ class Main { //The toLowercase block
         {
           opcode: 'fetch', //A fetch function that fetch API and return the data
           blockType: Scratch.BlockType.REPORTER,
-          text: 'fetch [data]', //The block format
+          text: 'FETCH [URL]', //The block format
           arguments: {
             DATA: {
               type: Scratch.ArgumentType.STRING,

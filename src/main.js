@@ -38,6 +38,17 @@ class Main { //The toLowercase block
               defaultValue: 'hello world!'
             }
           }
+        },
+        {
+          opcode: 'Fetch', //A fetch function that fetch API and return the data
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Fetch [data]', //The block format
+          arguments: {
+            DATA: {
+              type: Scratch.ArgumentType.STRING,
+              deafultValue: ''
+            }
+          }
         }
       ]
     };
@@ -49,6 +60,12 @@ class Main { //The toLowercase block
  
   ToUppercase (args) {
     return toupper(args.TEXT) //Converts the input of the block to uppercase
+  }
+
+  Fetch (args) { //The Fetch block
+    return fetch(args.DATA)
+      .then(r => r.text())
+      .catch(() => '');
   }
 }
 

@@ -40,9 +40,9 @@ class Main { //The toLowercase block
           }
         },
         {
-          opcode: 'Fetch', //A fetch function that fetch API and return the data
+          opcode: 'fetch', //A fetch function that fetch API and return the data
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Fetch [data]', //The block format
+          text: 'fetch [data]', //The block format
           arguments: {
             DATA: {
               type: Scratch.ArgumentType.STRING,
@@ -62,7 +62,7 @@ class Main { //The toLowercase block
     return toupper(args.TEXT) //Converts the input of the block to uppercase
   }
 
-  Fetch (args) {
+  fetch (args) {
     return fetch(args.URL)
       .then(r => r.text())
       .catch(() => '');

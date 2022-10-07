@@ -80,11 +80,7 @@ class Main { //The toLowercase block
   }
 
   log (args) {
-    if(!!args.TEXT){
-      return "[ERROR] Empty argument(s)"
-    } else {
-      console.log(args.TEXT)
-    }
+    console.log(args.TEXT)
   }
 }
 

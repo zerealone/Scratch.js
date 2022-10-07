@@ -80,7 +80,8 @@ class Main { //The toLowercase block
   }
 
   log (args) {
-    console.log(args.TEXT)
+    console.log(args.TEXT);
+    return "Open Developer Tools To See The Message!"
   }
 }
 

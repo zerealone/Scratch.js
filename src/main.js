@@ -49,6 +49,17 @@ class Main { //The toLowercase block
               deafultValue: 'https://api.scratch.mit.edu'
             }
           }
+        },
+        {
+          opcode: 'log',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'log [TEXT]',
+          arguments: {
+            TEXT: {
+              type: Scratch.ArgumentType.STRING,
+              deafultValue: 'Hello World!'
+            }
+          }
         }
       ]
     };
@@ -66,6 +77,14 @@ class Main { //The toLowercase block
     return fetch(args.URL)
       .then(r => r.text())
       .catch(() => '');
+  }
+
+  log (args) {
+    if(!!args.TEXT){
+      return "[ERROR] Empty argument(s)"
+    } else {
+      console.log(args.TEXT)
+    }
   }
 }
 

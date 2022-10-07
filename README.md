@@ -14,3 +14,5 @@ Then, you will gonna need to enter a URL to import the extension. Enter this URL
 
 After this, you're done! Just lookup for the `Scratch.js` blocks type in the list that is in the left.
 
+## Wiki
+Go to the `Wiki` tab in this repo, to view the wiki about it.
